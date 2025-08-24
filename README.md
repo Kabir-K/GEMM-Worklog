@@ -15,15 +15,15 @@ The experiments progressively apply different optimization techniques to improve
 
 ## Kernel Versions & Results
 
-| Kernel | Description                               | Avg Time (ms) | GFLOPS  | TFLOPs |
-|--------|-------------------------------------------|---------------|---------|--------|
-| **s00** | Baseline (cuBLAS reference)               | 15.127        | 9085.44 | 9.09   |
-| **s03** | Coalesced memory access                   | 123.151       | 1116.02 | 1.12   |
-| **s04** | 1D Block tiling                           | 41.169        | 3338.39 | 3.34   |
-| **s05** | 2D Block tiling                           | 25.056        | 5485.26 | 5.49   |
-| **s06** | Vectorized loads                          | 16.325        | 8418.74 | 8.42   |
-| **s07** | Decrease Smem Conflict                    | 19.919        | 6899.95 | 6.90   |
-| **s10** | Warp tiling                               | 14.177        | 9694.65 | 9.69   |
+| Kernel | Description                               | Avg Time (ms) | GFLOPS   | TFLOPs |
+|--------|-------------------------------------------|---------------|----------|--------|
+| **s00** | Baseline (cuBLAS reference)              | 15.127        | 9085.44  | 9.09   |
+| **s03** | Coalesced memory access                  | 123.151       | 1116.02  | 1.12   |
+| **s04** | 1D Block tiling                          | 41.169        | 3338.39  | 3.34   |
+| **s05** | 2D Block tiling                          | 25.056        | 5485.26  | 5.49   |
+| **s06** | Vectorized loads                         | 16.325        | 8418.74  | 8.42   |
+| **s07** | Decrease Smem Conflict                   | 19.919        | 6899.95  | 6.90   |
+| **s10** | Warp tiling                              | 14.177        | 10394.65 | 10.39  |
 
 ---
 
