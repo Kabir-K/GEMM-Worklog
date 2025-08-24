@@ -8,7 +8,7 @@ The experiments progressively apply different optimization techniques to improve
 ## Benchmark Setup
 - Matrix size: `M = N = K = 4096`
 - Runs per kernel: `20`
-- Hardware: NVIDIA GPU (tested under CUDA)
+- Hardware: NVIDIA GeForce RTX 4060
 - Metric: Execution time (ms) and throughput (GFLOPS / TFLOPS)
 
 ---
