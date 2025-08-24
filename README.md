@@ -25,7 +25,7 @@ The experiments progressively apply different optimization techniques to improve
 | **s05** | 2D Block tiling                          | 25.056        | 5485.26  | 5.49   |
 | **s06** | Vectorized loads                         | 16.325        | 8418.74  | 8.42   |
 | **s07** | Decrease Smem Conflict                   | 19.919        | 6899.95  | 6.90   |
-| **s10** | Warp tiling                              | 14.177        | 10394.65 | 10.39  |
+| **s10** | Warp tiling                              | 14.177        | 10134.65 | 10.13  |
 
 ---
 
