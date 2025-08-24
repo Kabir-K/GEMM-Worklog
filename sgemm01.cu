@@ -3,23 +3,11 @@
 #include <time.h>
 #include <cuda_runtime.h>
 
-#define M 4096  // Number of rows in A and C
-#define K 4096   // Number of columns in A and rows in B
-#define N 4096  // Number of columns in B and C
+#define M 4096  
+#define K 4096 
+#define N 4096 
 #define BLOCK_SIZE 32
 
-
-void matmul_cpu(float *A, float *B, float *C, int m, int k, int n) {
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++) {
-            float sum = 0.0f;
-            for (int l = 0; l < k; l++) {
-                sum += A[i * k + l] * B[l * n + j];
-            }
-            C[i * n + j] = sum;
-        }
-    }
-}
 
 __global__ void matmul_gpu(float *A, float *B, float *C, int m, int k, int n) {
     int row = blockIdx.y * blockDim.y + threadIdx.y;
@@ -91,7 +79,7 @@ int main() {
     }
 
     double avg_s = total / runs;
-    double avg_ms = avg_ms * 1000;
+    double avg_ms = avg_s * 1000;
 
     double total_flops = 2.0 * (double)M * (double)N * (double)K;
     double gflops = total_flops / (avg_s * 1.0e9);
