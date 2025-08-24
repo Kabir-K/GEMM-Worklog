@@ -37,7 +37,7 @@ The experiments progressively apply different optimization techniques to improve
 ---
 
 ## Notes
-- `sgemm00.cu` is a **cuBLAS reference** implementation.  
+- `sgemm00.cu` is a **cuBLAS reference** implementation. Link cublas to compile ( -lcublas ) 
 - Subsequent files (`sgemm03.cu`, `sgemm04.cu`, …, `sgemm10.cu`) implement incremental optimization strategies.  
 - Results may vary depending on GPU architecture and CUDA version.  
 
@@ -46,6 +46,5 @@ The experiments progressively apply different optimization techniques to improve
 ## How to Run
 Compile with `nvcc`:
 ```bash
-nvcc sgemm00.cu -o s00 -lcublas
 nvcc sgemm06.cu -o s06
 ./s06
